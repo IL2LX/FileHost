@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CVRX Mod - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Initial hidden state */
+    body { opacity: 0; }
+    header { opacity: 0; }
+    main h1, main p { opacity: 0; }
+
+    /* Animations */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideDown { from { transform: translateY(-20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* Animation classes */
+    .animate-body { animation: fadeIn 1.2s ease forwards; }
+    .animate-header { animation: slideDown 1s ease forwards; }
+    .animate-h1 { animation: fadeUp 1s ease forwards; animation-delay: 0.4s; }
+    .animate-p { animation: fadeUp 1s ease forwards; animation-delay: 0.7s; }
+  </style>
+</head>
+<body class="animate-body">
+  <header class="animate-header">
+    <div class="logo">CVRX</div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="download.html">Download</a>
+      <a href="forum.html">Forum</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="animate-h1">Welcome to CVRX Mod</h1>
+    <p class="animate-p">A modern mod for ChilloutVR that enhances your experience with powerful tools and customization.</p>
+  </main>
+</body>
+</html>
